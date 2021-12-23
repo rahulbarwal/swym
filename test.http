@@ -1,0 +1,8 @@
+POST https://swym-assessment.azurewebsites.net/api/postTweetData?code=5bUlaFQ02PPGMxogLxBQvgO6EAiAHVifulW3wLmZopEgDB9dwCXiLQ==
+
+{
+  "username":"rahul",
+  "location":"Pune",
+  "text":"first tweet",
+  "tweetCount":10
+}

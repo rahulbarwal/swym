@@ -14,6 +14,8 @@ export default class CrossXTweets implements EventAction {
 
   execute(data: TweetData) {
     data.color = 'Green';
-    console.log(`${data['user-name']} crossed ${this.limit} tweets.\n\n Marking his tweets ${data.color}.`)
+    const operation = `${data.username} crossed ${this.limit} tweets.\n Marking his tweets ${data.color}. \n Final data : ${JSON.stringify(data)} \n *********`;
+    console.log(operation)
+    return operation
   }
 }

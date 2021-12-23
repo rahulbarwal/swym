@@ -12,6 +12,8 @@ export default class SpecificLocationAction implements EventAction {
   }
 
   execute(data: TweetData) {
-    console.log(`Specific city tweet was made to city: [${this.city}] with data: [${data}]`)
+    const operation = `Specific city tweet was made to city: [${this.city}] with data: [${JSON.stringify(data)}]\n **********`;
+    console.log(operation);
+    return operation;
   }
 }

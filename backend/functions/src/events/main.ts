@@ -11,8 +11,8 @@ import { TweetData } from "./interfaces/data.interface";
   CONDITIONS_ACTIONS.addConditionAction(new CrossXTweets(100));
 })();
 
-function onData(data: TweetData): void {
-  CONDITIONS_ACTIONS.runChecks(data);
+function onData(data: TweetData): string {
+  return CONDITIONS_ACTIONS.runChecks(data);
 }
 
 export {

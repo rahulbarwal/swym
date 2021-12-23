@@ -17,11 +17,13 @@ class ConditionActionMapper {
   }
 
   public runChecks(data: TweetData) {
+    const res = [];
     for (const cAction of this.conditions) {
       if (cAction.predicate(data)) {
-        cAction.execute(data);
+        res.push(cAction.execute(data));
       }
     }
+    return res.join("\n");
   }
 }
 

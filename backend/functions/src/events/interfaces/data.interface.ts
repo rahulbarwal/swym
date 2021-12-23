@@ -1,5 +1,5 @@
 interface TweetData {
-  'user-name': string;
+  'username': string;
   'location': string;
   'text': string;
   'tweetCount'?: number;
