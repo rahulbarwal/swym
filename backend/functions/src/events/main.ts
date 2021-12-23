@@ -1,6 +1,7 @@
 import CONDITIONS_ACTIONS from "./conditionActionMapper";
 import CrossXTweets from "./actions/CrossXTweets.action";
-import SpecificLocationAction from "./actions/SpecificLocationAction.action";
+import SpecificLocationAction from "./actions/SpecificLocation.action";
+import { TweetData } from "./interfaces/data.interface";
 
 
 (function initializeConditionsActions() {
@@ -10,10 +11,10 @@ import SpecificLocationAction from "./actions/SpecificLocationAction.action";
   CONDITIONS_ACTIONS.addConditionAction(new CrossXTweets(100));
 })();
 
-function onData(data: any) {
-  for (let cAction of CONDITIONS_ACTIONS.conditionsActions) {
+function onData(data: TweetData): void {
+  for (const cAction of CONDITIONS_ACTIONS.conditionsActions) {
     if (cAction.predicate(data)) {
-      cAction.execute();
+      cAction.execute(data);
     }
   }
 }

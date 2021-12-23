@@ -9,7 +9,7 @@ export default class CrossXTweets implements EventAction {
   }
 
   predicate(data: TweetData) {
-    return data.tweetCount && data.tweetCount > this.limit;
+    return !!data.tweetCount && data.tweetCount > this.limit;
   }
 
   execute(data: TweetData) {

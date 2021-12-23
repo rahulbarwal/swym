@@ -1,5 +1,7 @@
+import { TweetData } from "./data.interface";
+
 interface EventAction {
-    execute: Function;
-    predicate: Function;
+    execute: (data: TweetData) => void;
+    predicate: (data: TweetData) => boolean;
 }
 export type { EventAction };
