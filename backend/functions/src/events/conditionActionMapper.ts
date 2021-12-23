@@ -1,24 +1,22 @@
-import { SystemAction } from "./action.interface";
-import { ConditionPredicate } from "./types";
-
+import { EventAction } from "./interfaces/action.interface";
 
 class ConditionActionMapper {
-    private mapperObj: Map<ConditionPredicate, SystemAction>;
-    get conditions() {
-        return this.mapperObj;
-    }
+  private conditions: EventAction[];
+  get conditionsActions() {
+    return this.conditions;
+  }
 
-    constructor() {
-        this.mapperObj = new Map<ConditionPredicate, SystemAction>();
-    }
+  constructor() {
+    this.conditions = [];
+  }
 
-    public addConditionAction(predicate: ConditionPredicate, action: SystemAction) {
-        if (this.mapperObj.get(predicate)) {
-            console.error('Predicate already registered');
-        } else {
-            this.mapperObj.set(predicate, action);
-        }
-    }
+  public addConditionAction(conditionAction: EventAction) {
+    this.conditions.push(conditionAction);
+  }
+
+  public removeConditionAction(index: number) {
+    this.conditions.splice(index, 1);
+  }
 }
 
 const CONDITIONS_ACTIONS = new ConditionActionMapper();
