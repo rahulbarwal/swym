@@ -12,11 +12,7 @@ import { TweetData } from "./interfaces/data.interface";
 })();
 
 function onData(data: TweetData): void {
-  for (const cAction of CONDITIONS_ACTIONS.conditionsActions) {
-    if (cAction.predicate(data)) {
-      cAction.execute(data);
-    }
-  }
+  CONDITIONS_ACTIONS.runChecks(data);
 }
 
 export {
