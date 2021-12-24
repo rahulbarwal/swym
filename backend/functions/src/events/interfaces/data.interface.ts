@@ -1,9 +1,10 @@
 interface TweetData {
   'username': string;
-  'location': string;
   'text': string;
+  'location'?: string;
   'tweetCount'?: number;
   'color'?: string;
+  'tags'?: string[];
 }
 
 export type { TweetData }

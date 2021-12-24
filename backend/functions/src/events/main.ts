@@ -1,10 +1,10 @@
 import CONDITIONS_ACTIONS from "./conditionActionMapper";
-import CrossXTweets from "./actions/CrossXTweets.action";
-import SpecificLocationAction from "./actions/SpecificLocation.action";
 import { TweetData } from "./interfaces/data.interface";
-
+import { SpecificLocationAction, CrossXTweets, HashTagAction } from "./actions";
 
 (function initializeConditionsActions() {
+  CONDITIONS_ACTIONS.addConditionAction(new HashTagAction('awesome-hashtag'));
+
   CONDITIONS_ACTIONS.addConditionAction(new SpecificLocationAction('Pune'));
   CONDITIONS_ACTIONS.addConditionAction(new SpecificLocationAction('London'));
 
