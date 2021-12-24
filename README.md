@@ -1,7 +1,7 @@
 
 ## UML for system
 
-![Class diagram](swym.png "Condiaion action system")
+![Class diagram](swym.PNG "Condiaion action system")
 
 ## Cloud deployment
 This complete system is deployed to `Azure cloud functions` and are accessible at below URL(this only supports `POST`):
