@@ -1,5 +1,5 @@
 
-# Condtion action system
+# Condition action system
 Main code base is at this directory:    `\backend\functions\src\events`
 
 ## UML for system
@@ -7,7 +7,7 @@ Main code base is at this directory:    `\backend\functions\src\events`
 ![Class diagram](swym.PNG "Condiaion action system")
 
 ## Cloud deployment
-This complete system is deployed to `Azure cloud functions` and are accessible at below URL(this only supports `POST`):
+This complete system is deployed to `Azure cloud functions` and are accessible at the below URL(this only supports `POST`):
 
     https://swym-assessment.azurewebsites.net/api/postTweetData?code=5bUlaFQ02PPGMxogLxBQvgO6EAiAHVifulW3wLmZopEgDB9dwCXiLQ==
 ### Sample Hits
