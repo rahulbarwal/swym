@@ -1,4 +1,7 @@
 
+# Condtion action system
+Main code base is at this directory:    `\backend\functions\src\events`
+
 ## UML for system
 
 ![Class diagram](swym.PNG "Condiaion action system")
