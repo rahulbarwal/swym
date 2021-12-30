@@ -12,6 +12,9 @@ export default class SpecificLocationAction implements EventAction {
   }
 
   execute(data: TweetData) {
+    const displayData = data;
+    delete displayData.tweetCount;
+
     const operation = `${data.username} made a tweet from city: [${this.city}] with data: [${JSON.stringify(data)}]\n **********`;
     console.log(operation);
     return operation;
