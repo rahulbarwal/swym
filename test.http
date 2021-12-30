@@ -11,8 +11,8 @@ POST https://swym-assessment.azurewebsites.net/api/postTweetData?code=5bUlaFQ02P
 
 {
 "username":"Anuj",
-"location":"Pune",
-"text":"first tweet"
+"location":"London",
+"text":"1 tweet"
 }
 
 ###
@@ -21,8 +21,7 @@ POST https://swym-assessment.azurewebsites.net/api/postTweetData?code=5bUlaFQ02P
 {
 "username":"vivek",
 "location":"Pune",
-"text":"fifth tweet",
-
+"text":"fourth tweet",
 "tags": ["awesome-hashtag"]
 }
 ###
