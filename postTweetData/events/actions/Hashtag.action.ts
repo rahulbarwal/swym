@@ -9,11 +9,11 @@ export default class HashtagAction implements EventAction {
   }
 
   predicate(data: TweetData) {
-    return Array.isArray(data.tags) && data.tags.includes(this.searchTag);
+    return Array.isArray(data.tags) && data.tags.toString().includes(this.searchTag);
   }
 
   execute(data: TweetData) {
-    const operation = `${data.username} hit this tag: [${this.searchTag}].\n Will include him in mails for this tag. \n Final data : ${JSON.stringify(data)} \n *********`;
+    const operation = `${data.username} hit this tag: [${this.searchTag}].\n Will include him in mails for this tag. \n*********`;
     console.log(operation);
     return operation;
   }

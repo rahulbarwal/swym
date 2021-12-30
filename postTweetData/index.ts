@@ -1,6 +1,6 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions"
-import { validateTweetData } from "../backend/functions/src/data-validation/incomingdata.validation";
-import { onData } from "../backend/functions/src/events/main";
+import { validateTweetData } from "./data-validation/incomingdata.validation";
+import tweetController from "./controllers/tweets.controller";
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
   const response = {
@@ -11,7 +11,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
   if (req.body) {
     const data = validateTweetData(req.body);
     if (data) {
-      response.body = onData(data);
+      response.body = tweetController.processTweet(data);
     } else {
       response.status = 400;
       response.body = `Data is invalid\n ${data}`;

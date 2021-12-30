@@ -8,7 +8,7 @@ import { SpecificLocationAction, CrossXTweets, HashTagAction } from "./actions";
   CONDITIONS_ACTIONS.addConditionAction(new SpecificLocationAction('Pune'));
   CONDITIONS_ACTIONS.addConditionAction(new SpecificLocationAction('London'));
 
-  CONDITIONS_ACTIONS.addConditionAction(new CrossXTweets(100));
+  CONDITIONS_ACTIONS.addConditionAction(new CrossXTweets(3));
 })();
 
 function onData(data: TweetData): string {
